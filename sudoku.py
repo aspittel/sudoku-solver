@@ -2,7 +2,7 @@ class Cell:
     """One individual cell on the Sudoku board"""
 
     def __init__(self, column_number, row_number, number, game):
-        # Whether or not to include the cell in the backgtracking
+        # Whether or not to include the cell in the backtracking
         self.solved = True if number > 0 else False
         self.number = number  # the current value of the cell
         # Which numbers the cell could potentially be
