@@ -1,6 +1,3 @@
-from copy import deepcopy
-
-
 class Cell:
     """One individual cell on the Sudoku board"""
 
@@ -67,7 +64,7 @@ class SudokuSolver:
         self.backtrack_coord = 0  # what index the backtracking is currently at
 
     def get_row(self, row_number):
-        """Get the full row from the puzzle based on the row index""""
+        """Get the full row from the puzzle based on the row index"""
         return self.puzzle[row_number]
 
     def get_column(self, column_number):
@@ -143,7 +140,7 @@ class SudokuSolver:
         self.change_cells(cell)
 
     def run_solve(self):
-        """"runs the solver until we are at the end of the puzzle"""
+        """runs the solver until we are at the end of the puzzle"""
         while self.backtrack_coord <= len(self.solve_puzzle) - 1:
             self.solve()
 
